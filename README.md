@@ -38,41 +38,41 @@ benchmark [arguments (optional)]
 
 > You can also extend the comparison table with percentage values based on fastest result; `benchmark compare -p`
 # Benchmarks
-* __Machine:__ Linux fv-az98 5.3.0-1032-azure #33~18.04.1-Ubuntu SMP Fri Jun 26 15:01:15 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux | 2 vCPUs | 7GB.
+* __Machine:__ Linux fv-az59 5.3.0-1034-azure #35~18.04.1-Ubuntu SMP Mon Jul 13 12:54:45 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux | 2 vCPUs | 7GB.
 * __Method:__ `autocannon -c 100 -d 40 -p 10 localhost:3000` (two rounds; one to warm-up, one to measure).
 * __Node:__ `v12.18.3`
-* __Run:__ Sat Aug  1 00:53:27 UTC 2020
+* __Run:__ Tue Sep  1 00:55:51 UTC 2020
 
 |                          | Router | Requests/s | Latency | Throughput/Mb |
 | :--                      | --:    | :-:        | --:     | --:           |
-| bare                     | ✗      | 36211.0    | 2.67    | 5.66          |
-| connect-router           | ✓      | 30656.6    | 3.16    | 4.79          |
-| connect                  | ✗      | 33967.2    | 2.85    | 5.31          |
-| egg.js                   | ✓      | 13567.6    | 7.29    | 4.48          |
-| express-route-prefix     | ✓      | 7355.2     | 13.50   | 2.56          |
-| express-with-middlewares | ✓      | 6941.2     | 14.25   | 2.51          |
-| express                  | ✓      | 7771.4     | 12.71   | 1.22          |
-| fastify-big-json         | ✓      | 7880.9     | 12.54   | 90.49         |
-| fastify                  | ✓      | 33584.6    | 2.88    | 5.25          |
-| foxify                   | ✓      | 35943.8    | 2.69    | 5.11          |
-| hapi                     | ✓      | 18043.7    | 5.47    | 2.82          |
-| koa-router               | ✓      | 23397.2    | 4.18    | 3.66          |
-| koa                      | ✗      | 26538.4    | 3.67    | 4.15          |
-| micro-route              | ✓      | 30991.8    | 3.13    | 4.85          |
-| micro                    | ✗      | 36434.6    | 2.65    | 5.70          |
-| microrouter              | ✓      | 19470.4    | 5.04    | 3.05          |
-| polka                    | ✓      | 34129.8    | 2.83    | 5.34          |
-| polkadot                 | ✗      | 43744.8    | 2.14    | 6.84          |
-| rayo                     | ✓      | 33512.0    | 2.89    | 5.24          |
-| restify                  | ✓      | 25844.0    | 3.77    | 4.09          |
-| server-base-router       | ✓      | 30141.2    | 3.22    | 4.71          |
-| server-base              | ✗      | 32175.8    | 3.01    | 5.03          |
-| spirit-router            | ✓      | 29999.6    | 2.94    | 4.69          |
-| spirit                   | ✗      | 31213.4    | 2.82    | 4.88          |
+| bare                     | ✗      | 47676.0    | 2.01    | 7.46          |
+| connect-router           | ✓      | 42160.0    | 2.28    | 6.59          |
+| connect                  | ✗      | 47173.6    | 2.03    | 7.38          |
+| egg.js                   | ✓      | 17877.7    | 5.52    | 5.90          |
+| express-route-prefix     | ✓      | 9249.8     | 10.72   | 3.22          |
+| express-with-middlewares | ✓      | 9040.5     | 10.91   | 3.27          |
+| express                  | ✓      | 10195.9    | 9.68    | 1.59          |
+| fastify-big-json         | ✓      | 8853.1     | 11.15   | 101.66        |
+| fastify                  | ✓      | 48090.4    | 1.99    | 7.52          |
+| foxify                   | ✓      | 48035.2    | 2.00    | 6.83          |
+| hapi                     | ✓      | 21345.6    | 4.60    | 3.34          |
+| koa-router               | ✓      | 32570.6    | 2.99    | 5.09          |
+| koa                      | ✗      | 35945.4    | 2.70    | 5.62          |
+| micro-route              | ✓      | 41900.0    | 2.30    | 6.55          |
+| micro                    | ✗      | 46905.6    | 2.05    | 7.34          |
+| microrouter              | ✓      | 25331.2    | 3.85    | 3.96          |
+| polka                    | ✓      | 47488.8    | 2.02    | 7.43          |
+| polkadot                 | ✗      | 55628.0    | 1.68    | 8.70          |
+| rayo                     | ✓      | 46473.6    | 2.07    | 7.27          |
+| restify                  | ✓      | 32256.8    | 3.01    | 5.11          |
+| server-base-router       | ✓      | 42693.6    | 2.26    | 6.68          |
+| server-base              | ✗      | 44572.8    | 2.16    | 6.97          |
+| spirit-router            | ✓      | 35887.2    | 2.20    | 5.61          |
+| spirit                   | ✗      | 36592.2    | 2.13    | 5.72          |
 | take-five                | ✓      | 0.0        | 0.00    | 0.00          |
-| total.js                 | ✓      | 22315.2    | 4.37    | 6.34          |
-| trek-engine              | ✗      | 28213.2    | 3.45    | 4.01          |
-| trek-router              | ✓      | 27641.6    | 3.53    | 3.93          |
-| vapr                     | ✓      | 24775.6    | 3.93    | 3.52          |
-| yeps-router              | ✓      | 27801.6    | 3.50    | 4.35          |
-| yeps                     | ✗      | 33319.6    | 2.90    | 5.21          |
+| total.js                 | ✓      | 35251.4    | 2.75    | 10.02         |
+| trek-engine              | ✗      | 40349.0    | 2.40    | 5.73          |
+| trek-router              | ✓      | 41715.2    | 2.32    | 5.93          |
+| vapr                     | ✓      | 37991.2    | 2.54    | 5.40          |
+| yeps-router              | ✓      | 37724.0    | 2.57    | 5.90          |
+| yeps                     | ✗      | 45434.4    | 2.11    | 7.11          |
